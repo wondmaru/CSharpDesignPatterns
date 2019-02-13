@@ -4,13 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSahrpDesignPatterns
+namespace AbstractFactory
 {
-    public class WideWheel : AbstractWheel
+    class RoadSeatParts : IBikeSeat
     {
-        public WideWheel(int size) : base(size, true)
+        public string BikeSeatParts
         {
-
+            get { return "Seat parts for Road Bike"; }
         }
+
+
     }
 }

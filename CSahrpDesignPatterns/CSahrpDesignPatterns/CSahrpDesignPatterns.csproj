@@ -42,11 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractFactory\MountainBikeFactory.cs" />
+    <Compile Include="AbstractFactory\RoadBikeFactory.cs" />
+    <Compile Include="AbstractFactory\AbstractBikeFactory.cs" />
+    <Compile Include="AbstractFactory\IBikeFrame.cs" />
+    <Compile Include="AbstractFactory\IBikeSeat.cs" />
+    <Compile Include="AbstractFactory\MaountainFrame.cs" />
+    <Compile Include="AbstractFactory\MountainBikeSeat.cs" />
+    <Compile Include="AbstractFactory\RoadFrame.cs" />
+    <Compile Include="AbstractFactory\RoadSeatParts.cs" />
     <Compile Include="Base\AbstractBike.cs" />
     <Compile Include="Base\AbstractMountainBike.cs" />
     <Compile Include="Base\AbstractRoadBike.cs" />
     <Compile Include="Base\AbstractWheel.cs" />
-    <Compile Include="Base\Class1.cs" />
+    <Compile Include="Base\BikeColor.cs" />
     <Compile Include="Base\CrossCountry.cs" />
     <Compile Include="Base\DownHill.cs" />
     <Compile Include="Base\IBycycle.cs" />
@@ -55,6 +64,12 @@
     <Compile Include="Base\Touring.cs" />
     <Compile Include="Base\Vintage.cs" />
     <Compile Include="Base\WideWheel.cs" />
+    <Compile Include="Builder\BikeBulder.cs" />
+    <Compile Include="Builder\BikeDirector.cs" />
+    <Compile Include="Builder\MountainBiekeBulder.cs" />
+    <Compile Include="Builder\MountainBikeDirector.cs" />
+    <Compile Include="Builder\RoadBikeBuilder.cs" />
+    <Compile Include="Builder\RoadBikeDirector.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

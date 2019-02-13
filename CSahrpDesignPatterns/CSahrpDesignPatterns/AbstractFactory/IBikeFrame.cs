@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSahrpDesignPatterns
+namespace AbstractFactory
 {
-    public interface IWheel
+    public interface IBikeFrame
     {
-        // public int size { get; }
-        // public bool IsWide { get; }
+        string BikeFrameParts { get; }
     }
 }

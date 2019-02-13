@@ -21,7 +21,7 @@ namespace CSahrpDesignPatterns
 
         }
 
-        public int size
+        public int Size
         {
             get
             {
