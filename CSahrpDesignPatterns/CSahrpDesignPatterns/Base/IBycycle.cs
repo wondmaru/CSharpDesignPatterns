@@ -10,6 +10,7 @@ namespace CSahrpDesignPatterns
     {
         IWheel GetWheel { get; }
         BikecColor ColorType { get; }
+        decimal price { get; }
         void paint(BikecColor color);
 
     }

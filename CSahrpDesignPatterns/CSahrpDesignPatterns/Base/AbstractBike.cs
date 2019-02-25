@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSahrpDesignPatterns
 {
-    public class AbstractBike : IBycycle
+    public abstract class AbstractBike : IBycycle
     {
         private BikecColor _color;
         private IWheel _wheel;
@@ -26,6 +26,7 @@ namespace CSahrpDesignPatterns
                 return _wheel;
             }
         }
+        public abstract decimal price { get; }
 
         public AbstractBike(BikecColor color, IWheel wheel)
         {
@@ -39,7 +40,7 @@ namespace CSahrpDesignPatterns
         }
         public override string ToString()
         {
-            return this.GetType().Name + "Bicycle color is " + _color;
+            return this.GetType().Name + "Bicycle color is " + _color + " Cost is " + 240.00m;
         }
     }
 }

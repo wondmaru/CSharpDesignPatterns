@@ -8,6 +8,7 @@ namespace CSahrpDesignPatterns
 {
     public class Vintage : AbstractRoadBike
     {
+        public override decimal price { get; } = 570.00m;
         public Vintage(IWheel wheel)
             : this(BikecColor.Black, wheel)
         {

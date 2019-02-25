@@ -5,6 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using AbstractFactory;
 using Builder;
+using Singleton;
+using Adapter;
+using Decorator;
+
 
 namespace CSahrpDesignPatterns
 {
@@ -13,7 +17,37 @@ namespace CSahrpDesignPatterns
         static void Main(string[] args)
         {
             // AbstractFactoryDemo();
-            BuilderPatternDemo();
+            // BuilderPatternDemo();
+            //SingltonPatternDemo();
+
+            // AdapterPatternDemo();
+            DacoratePatternDemo();
+        }
+        private static void DacoratePatternDemo()
+        {
+            IBycycle myTorBike = new Touring(new NarrowWheel(24));
+            Console.WriteLine(myTorBike);
+            myTorBike = new CustomerOption(myTorBike);
+            Console.WriteLine(myTorBike);
+        }
+        private static void AdapterPatternDemo()
+        {
+            IList<IWheel> wheels = new List<IWheel>();
+            wheels.Add(new NarrowWheel(24));
+            wheels.Add(new WideWheel(24));
+            wheels.Add(new NarrowWheel(26));
+            wheels.Add(new UltraWheeelAdapter(new UltraWheel(28)));
+            foreach (IWheel wheel in wheels)
+            {
+                Console.WriteLine(wheel);
+            }
+        }
+        private static void SingltonPatternDemo()
+        {
+            SerialNumberGenerator generator = SerialNumberGenerator.Instance;
+            Console.WriteLine("Next Serial" + generator.NextSerial);
+            Console.WriteLine("Next Serial" + generator.NextSerial);
+            Console.WriteLine("Next Serial" + generator.NextSerial);
         }
 
         private static void BuilderPatternDemo()

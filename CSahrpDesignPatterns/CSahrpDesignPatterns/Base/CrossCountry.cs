@@ -8,6 +8,7 @@ namespace CSahrpDesignPatterns
 {
     public class CossCountry : AbstractMountainBike
     {
+        public override decimal price { get; } = 870.00m;
         public CossCountry(IWheel wheel)
             : this(BikecColor.Red, wheel)
         {

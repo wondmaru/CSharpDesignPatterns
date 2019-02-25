@@ -8,6 +8,7 @@ namespace CSahrpDesignPatterns
 {
     public class DownHill : AbstractMountainBike
     {
+        public override decimal price { get; } = 840.00m;
         public DownHill(IWheel wheel)
             : this(BikecColor.Green, wheel)
         {

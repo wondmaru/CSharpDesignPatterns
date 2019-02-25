@@ -8,6 +8,7 @@ namespace CSahrpDesignPatterns
 {
     class Touring : AbstractRoadBike
     {
+        public override decimal price { get; } = 600.00m;
         public Touring(IWheel wheel)
             : this(BikecColor.Blue, wheel)
         {
