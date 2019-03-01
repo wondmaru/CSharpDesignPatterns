@@ -42,5 +42,20 @@ namespace CSahrpDesignPatterns
         {
             return this.GetType().Name + "Bicycle color is " + _color + " Cost is " + 240.00m;
         }
+
+        public virtual void CleanFrame()
+        {
+            Console.WriteLine("Cleaning frame...");
+        }
+
+        public virtual void TestRide()
+        {
+            Console.WriteLine("Taking the bike for a test ride...");
+        }
+
+        public void Airtires()
+        {
+            Console.WriteLine(" Airing up the tires...");
+        }
     }
 }

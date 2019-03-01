@@ -8,6 +8,10 @@ using Builder;
 using Singleton;
 using Adapter;
 using Decorator;
+using Facade;
+using Iterator;
+using System.Collections;
+using Observer;
 
 
 namespace CSahrpDesignPatterns
@@ -21,7 +25,64 @@ namespace CSahrpDesignPatterns
             //SingltonPatternDemo();
 
             // AdapterPatternDemo();
-            DacoratePatternDemo();
+            // DacoratePatternDemo();
+            //FacadePatternDemo();
+            // IteratorPatternDemo();
+            // IteratorPatternDemo2();
+            ObserverPatternDemo();
+        }
+        private static void ObserverPatternDemo()
+        {
+            Speedometer myspeedometer = new Speedometer();
+            SpeedMonitor monitor = new SpeedMonitor(myspeedometer);
+            GearBox gearBox = new GearBox(myspeedometer);
+            myspeedometer.CurrentSpeed = 10;
+            myspeedometer.CurrentSpeed = 20;
+            myspeedometer.CurrentSpeed = 25;
+            myspeedometer.CurrentSpeed = 30;
+            myspeedometer.CurrentSpeed = 35;
+
+
+        }
+        private static void IteratorPatternDemo2()
+        {
+            Console.WriteLine("=== Road Bikes ===");
+            RoadBikeRange roadBikeRange = new RoadBikeRange();
+
+            foreach (IBycycle bycycle in roadBikeRange.Range)
+            {
+                Console.WriteLine(bycycle);
+            }
+            Console.WriteLine("=== Mountain Bikes ===");
+            MountainBikeRange mountainBike = new MountainBikeRange();
+            foreach (IBycycle bycycle in mountainBike.Range)
+            {
+                Console.WriteLine(bycycle);
+            }
+        }
+
+
+        private static void IteratorPatternDemo()
+        {
+            Console.WriteLine("=== Road Bikes ===");
+            RoadBikeRange roadBikeRange = new RoadBikeRange();
+            PrintIterator(roadBikeRange.GetEnumerator());
+            Console.WriteLine("=== Mountain Bikes ===");
+            MountainBikeRange mountainBike = new MountainBikeRange();
+            PrintIterator(mountainBike.GetEnumerator());
+        }
+        private static void PrintIterator(IEnumerator iter)
+        {
+            while (iter.MoveNext())
+            {
+                Console.WriteLine(iter.Current);
+            }
+        }
+        private static void FacadePatternDemo()
+        {
+            BikeFacade facade = new BikeFacade();
+            facade.PrepareForSale(new DownHill(BikecColor.Red, new WideWheel(20)));
+
         }
         private static void DacoratePatternDemo()
         {

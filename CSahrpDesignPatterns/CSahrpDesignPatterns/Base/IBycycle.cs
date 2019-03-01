@@ -12,6 +12,9 @@ namespace CSahrpDesignPatterns
         BikecColor ColorType { get; }
         decimal price { get; }
         void paint(BikecColor color);
+        void CleanFrame();
+        void Airtires();
+        void TestRide();
 
     }
 }
