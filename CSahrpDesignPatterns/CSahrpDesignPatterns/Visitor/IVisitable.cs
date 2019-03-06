@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Visitor;
+using CSahrpDesignPatterns;
 
-namespace CSahrpDesignPatterns
+namespace Visitor
 {
-    public interface IWheel
+    public interface IVisitable
     {
-        int size { get; }
-        bool IsWide { get; }
         void AcceptVisitor(IWheelVisitor visitor);
+
     }
 }
